@@ -19,7 +19,6 @@ while True:
         print('Ok papa!')
         raise SystemExit
     else: break
-inpGracz2 = inpGracz2.strip()
 def gra(x,y):
     if inpGracz1 == inpGracz2:
         print('Remis')
