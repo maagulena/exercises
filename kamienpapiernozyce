@@ -1,7 +1,8 @@
 allowedinp = ['kamień', 'papier', 'nożyce', 'zakończ']
 while True:
     inpGracz1 = input("Gracz 1 - Wpisz kamień, papier lub nożyce.  Wpisz zakończ aby zakończyć: ")
-    if not type(inpGracz1) is str or not inpGracz1.strip() in allowedinp:
+    inpGracz1 = inpGracz1.strip()
+    if not inpGracz1 in allowedinp:
         print("Błąd. Wpisz kamień, papier lub nożyce.  Wpisz zakończ aby zakończyć: ")
         continue
     elif inpGracz1 == 'zakończ':
@@ -10,14 +11,14 @@ while True:
     else: break
 while True:
     inpGracz2 = input("Gracz 2 - Wpisz kamień, papier lub nożyce.  Wpisz zakończ aby zakończyć: ")
-    if not type(inpGracz2) is str or not inpGracz2.strip() in allowedinp:
+    inpGracz2 = inpGracz2.strip()
+    if not inpGracz2 in allowedinp:
         print("Błąd. Wpisz kamień, papier lub nożyce.  Wpisz zakończ aby zakończyć: ")
         continue
     elif inpGracz2 == 'zakończ':
         print('Ok papa!')
         raise SystemExit
     else: break
-inpGracz1 = inpGracz1.strip()
 inpGracz2 = inpGracz2.strip()
 def gra(x,y):
     if inpGracz1 == inpGracz2:
