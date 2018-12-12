@@ -1,0 +1,41 @@
+allowedinp = ['kamień', 'papier', 'nożyce', 'zakończ']
+while True:
+    inpGracz1 = input("Gracz 1 - Wpisz kamień, papier lub nożyce.  Wpisz zakończ aby zakończyć: ")
+    if not type(inpGracz1) is str or not inpGracz1.strip() in allowedinp:
+        print("Błąd. Wpisz kamień, papier lub nożyce.  Wpisz zakończ aby zakończyć: ")
+        continue
+    elif inpGracz1 == 'zakończ':
+        print('Ok papa!')
+        raise SystemExit
+    else: break
+while True:
+    inpGracz2 = input("Gracz 2 - Wpisz kamień, papier lub nożyce.  Wpisz zakończ aby zakończyć: ")
+    if not type(inpGracz2) is str or not inpGracz2.strip() in allowedinp:
+        print("Błąd. Wpisz kamień, papier lub nożyce.  Wpisz zakończ aby zakończyć: ")
+        continue
+    elif inpGracz2 == 'zakończ':
+        print('Ok papa!')
+        raise SystemExit
+    else: break
+inpGracz1 = inpGracz1.strip()
+inpGracz2 = inpGracz2.strip()
+def gra(x,y):
+    if inpGracz1 == inpGracz2:
+        print('Remis')
+    elif inpGracz1 == 'kamień' and inpGracz2 == 'nożyce':
+        print('Gracz 1 wygrywa')
+    elif inpGracz1 == 'nożyce' and inpGracz2 == 'kamień':
+        print('Gracz 2 wygrywa')
+    elif inpGracz1 == 'papier' and inpGracz2 == 'nożyce':
+        print('Gracz 2 wygrywa')
+    elif inpGracz1 == 'nożyce' and inpGracz2 == 'papier':
+        print('Gracz 1 wygrywa')
+    elif inpGracz1 == 'kamień' and inpGracz2 == 'papier':
+        print('Gracz 2 wygrywa')
+    elif inpGracz1 == 'papier' and inpGracz2 == 'nożyce':
+        print('Gracz 1 wygrywa')
+    else:
+        print("Błąd. Spróbuj jeszcze raz")
+print("Gracz 1: ", inpGracz1)
+print("Gracz 2: ", inpGracz2)
+gra(inpGracz1,inpGracz2)
