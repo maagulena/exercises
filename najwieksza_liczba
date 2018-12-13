@@ -1,0 +1,19 @@
+def biggest():
+    numlist = list() 
+    while True:
+        numinp = input('Podaj liczbę. Wpisz wynik aby otrzymać największą liczbę. Wpisz zakończ by zakończyć: ')
+        if numinp == 'zakończ':
+            print('Ok papa')
+            break
+        elif numinp.lstrip('-').isnumeric(): #sprawdza, czy wpisano liczbę, jeśli jest ujemna to też zostanie dopisana do listy
+            numlist.append(numinp)
+        elif len(numlist) != 0 and numinp == 'wynik':
+            print('Największa liczba to: ', max(numlist))
+            break
+        elif not numinp.isnumeric():
+            print('Błąd. Podaj liczbę')
+            continue
+        else:
+            print('Podaj przynajmniej jedną liczbę')
+            continue
+biggest()
