@@ -1,0 +1,12 @@
+vowels = ['a', 'ą', 'e', 'ę', 'i', 'o', 'ó', 'u', 'y']
+wordinp = input('Enter a word: ')
+def vowcount(x):
+    count = 0
+    if wordinp.lstrip('-').isnumeric():
+        print('Error. Enter a word.')
+        raise SystemExit
+    for i in x:
+        if i in vowels:
+            count = count + 1
+    return count
+print("Number of vowels is", vowcount(wordinp))
