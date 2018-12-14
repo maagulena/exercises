@@ -1,0 +1,39 @@
+def calc():
+    calcinp1 = input('Enter number: ')
+    try:
+        calcinp1 = float(calcinp1)
+    except:
+        print('Error. Enter number')
+        exit()
+    opinput = input('Enter operator + - * /: ')
+    if not opinput in ["+", "-", "*", "/"]:
+        print('Incorrect input.')
+        exit()
+    calcinp2 = input('Enter number: ')
+    try:
+        calcinp2 = float(calcinp2)
+    except:
+        print('Error. Enter number')
+        exit()
+    if opinput == '+':
+        total = calcinp1 + calcinp2
+        print(total)
+    elif opinput == '-':
+        print(calcinp1 - calcinp2)
+    elif opinput == '*':
+        print(calcinp1 * calcinp2)
+    elif opinput == '/':
+        print(calcinp1 / calcinp2)
+    else:
+        print('Incorrect input.')
+        exit()
+while True:
+    calc()
+    continp = input('Continue? y/n: ')
+    if continp == 'y':
+        continue
+    elif continp == 'n':
+        break
+    else:
+        print('Error. Incorrect input')
+        break
