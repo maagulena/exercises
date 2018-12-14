@@ -22,7 +22,7 @@ def calc():
         print(calcinp1 - calcinp2)
     elif opinput == '*':
         print(calcinp1 * calcinp2)
-    elif opinput == '/':
+    elif calcinp2 != 0 and opinput == '/':
         print(calcinp1 / calcinp2)
     else:
         print('Incorrect input.')
